@@ -1,0 +1,15 @@
+[package]
+name = "types"
+version = "0.1.0"
+authors = ["Sigma Prime <contact@sigmaprime.io"]
+edition = { workspace = true }
+
+[lib]
+name = "types"
+path = "src/lib.rs"
+
+
+[dependencies]
+serde = { workspace = true, features = ["rc"] }
+ethereum_serde_utils = { workspace = true }
+arbitrary = { workspace = true }
