@@ -1,5 +1,5 @@
 use super::error::ConfigBuilderError;
-use crate::types::{DefaultLeaderFunction, InstanceHeight, LeaderFunction, OperatorId, Round};
+use crate::qbft_types::{DefaultLeaderFunction, InstanceHeight, LeaderFunction, OperatorId, Round};
 use std::collections::HashSet;
 use std::fmt::Debug;
 use std::time::Duration;
