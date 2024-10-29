@@ -7,14 +7,14 @@ use tokio::sync::mpsc::{UnboundedReceiver, UnboundedSender};
 use tracing::{debug, instrument, warn, Level};
 pub use validation::{validate_consensus_data, ValidatedData, ValidationError};
 
-pub use qbft_types::{
+pub use types::{
     Completed, ConsensusData, InMessage, InstanceHeight, InstanceState, LeaderFunction, OperatorId,
     OutMessage, Round,
 };
 
 mod config;
 mod error;
-mod qbft_types;
+mod types;
 mod validation;
 
 #[cfg(test)]

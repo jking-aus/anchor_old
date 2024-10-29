@@ -13,7 +13,17 @@ resolver = "2"
 edition = "2021"
 
 [workspace.dependencies]
-async-channel = "2.3.1"
+client = { path = "anchor/client" }
+qbft = { path = "anchor/qbft" }
+http_api = { path = "anchor/http_api" }
+types = { path = "anchor/types" }
+task_executor = { git = "https://github.com/sigp/lighthouse", branch = "anchor", default-features = false, features = [
+    "tracing",
+] }
+sensitive_url = { git = "https://github.com/sigp/lighthouse", branch = "anchor" }
+slot_clock = { git = "https://github.com/sigp/lighthouse", branch = "anchor" }
+derive_more = { version = "1.0.0", features = ["full"] }
+async-channel = "1.9"
 axum = "0.7.7"
 clap = { version = "4.5.15", features = ["derive", "wrap_help"] }
 dirs = "5.0.1"
@@ -22,7 +32,7 @@ futures = "0.3.30"
 hyper = "1.4"
 serde = { version = "1.0.208", features = ["derive"] }
 ethereum_serde_utils = "0.7.0"
-strum = { version = "0.24", features = ["derive"] }
+strum = { version = "0.26.3", features = ["derive"] }
 tokio = { version = "1.39.2", features = [
     "rt",
     "rt-multi-thread",

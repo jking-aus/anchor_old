@@ -1,6 +1,6 @@
 //! Validation for data function
 
-use crate::qbft_types::ConsensusData;
+use crate::types::ConsensusData;
 
 /// The list of possible validation errors that can occur
 #[derive(Debug)]

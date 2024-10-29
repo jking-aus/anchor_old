@@ -33,7 +33,7 @@ impl LeaderFunction for DefaultLeaderFunction {
 }
 
 /// This represents an individual round, these change on regular time intervals
-#[derive(Clone, Copy, Debug, Deref, Default, Add, PartialEq, Eq, Hash, PartialOrd)]
+#[derive(Clone, Copy, Debug, Deref, Add, PartialEq, Eq, Hash, PartialOrd)]
 pub struct Round(usize);
 
 impl Round {

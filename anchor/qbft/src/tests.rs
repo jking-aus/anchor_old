@@ -6,13 +6,13 @@ use super::*;
 use crate::validation::{validate_data, ValidatedData};
 use futures::stream::select_all;
 use futures::StreamExt;
-use qbft_types::DefaultLeaderFunction;
 use std::cmp::Eq;
 use std::hash::Hash;
 use std::pin::Pin;
 use std::task::{Context, Poll};
 use tracing::debug;
 use tracing_subscriber::filter::EnvFilter;
+use types::DefaultLeaderFunction;
 
 // HELPER FUNCTIONS FOR TESTS
 
