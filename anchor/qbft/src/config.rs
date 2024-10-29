@@ -41,7 +41,7 @@ impl<F: Clone + LeaderFunction> Config<F> {
         self.quorum_size
     }
 
-    /// The round number -- likely always 0 at initialisation unless we want to implement re-joining an existing
+    /// The round number -- likely always 1 at initialisation unless we want to implement re-joining an existing
     /// instance that has been dropped locally
     pub fn round(&self) -> Round {
         self.round
@@ -73,6 +73,12 @@ impl Default for Config<DefaultLeaderFunction> {
 /// Builder struct for constructing the QBFT instance configuration
 pub struct ConfigBuilder<F: LeaderFunction + Clone> {
     config: Config<F>,
+}
+
+impl Default for Round {
+    fn default() -> Self {
+        Round(1)
+    }
 }
 
 impl Default for ConfigBuilder<DefaultLeaderFunction> {
