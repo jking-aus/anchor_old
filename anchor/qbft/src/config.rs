@@ -1,5 +1,5 @@
 use super::error::ConfigBuilderError;
-use crate::qbft_types::{DefaultLeaderFunction, InstanceHeight, LeaderFunction, OperatorId, Round};
+use crate::types::{DefaultLeaderFunction, InstanceHeight, LeaderFunction, OperatorId, Round};
 use std::collections::HashSet;
 use std::fmt::Debug;
 use std::time::Duration;
@@ -73,12 +73,6 @@ impl Default for Config<DefaultLeaderFunction> {
 /// Builder struct for constructing the QBFT instance configuration
 pub struct ConfigBuilder<F: LeaderFunction + Clone> {
     config: Config<F>,
-}
-
-impl Default for Round {
-    fn default() -> Self {
-        Round(1)
-    }
 }
 
 impl Default for ConfigBuilder<DefaultLeaderFunction> {

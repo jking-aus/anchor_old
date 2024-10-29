@@ -48,6 +48,12 @@ impl Round {
     }
 }
 
+impl Default for Round {
+    fn default() -> Self {
+        Round(1)
+    }
+}
+
 /// The operator that is participating in the consensus instance.
 #[derive(Clone, Copy, Debug, Default, Eq, PartialEq, Hash, From, Deref)]
 pub struct OperatorId(usize);
@@ -70,11 +76,11 @@ pub enum InstanceState {
     /// Awaiting a propose from a leader
     AwaitingProposal,
     /// Awaiting consensus on PREPARE messages
-    Prepare = 1,
+    Prepare,
     /// Awaiting consensus on COMMIT messages
     Commit,
     /// We have sent a round change message
-    SentRoundChange = 4,
+    SentRoundChange,
     /// The consensus instance is complete
     Complete,
 }

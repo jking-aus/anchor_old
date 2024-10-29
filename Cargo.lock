@@ -3129,6 +3129,7 @@ name = "types"
 version = "0.1.0"
 dependencies = [
  "arbitrary",
+ "derive_more",
  "ethereum_serde_utils",
  "serde",
 ]

@@ -13,3 +13,4 @@ path = "src/lib.rs"
 serde = { workspace = true, features = ["rc"] }
 ethereum_serde_utils = { workspace = true }
 arbitrary = { workspace = true }
+derive_more = { workspace = true }
