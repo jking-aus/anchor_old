@@ -1,4 +1,4 @@
-use crate::qbft_types::{OperatorId, Round};
+/*use crate::qbft_types::{OperatorId, Round};
 
 // VaLidatorPK is an eth32 validator public key 48 bytes long
 pub struct ValdiatorPK {
@@ -33,4 +33,4 @@ pub struct SSVMessage<D> {
 pub struct SignedSSVMessage {
     signatures: usize,
     operator_ids: Vec<OperatorId>,
-}
+}*/

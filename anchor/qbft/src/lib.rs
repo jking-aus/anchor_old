@@ -14,6 +14,7 @@ pub use types::{
 
 mod config;
 mod error;
+mod sig_stub;
 mod types;
 mod validation;
 

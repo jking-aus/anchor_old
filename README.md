@@ -1,4 +1,5 @@
 # Anchor :anchor:
+
 #### Secret Share Validator (SSV) Validator Client
 
 [![Book Status]][Book Link] [![CI status]][gh-ci]
@@ -8,11 +9,10 @@ in Rust and maintained by [Sigma Prime](https://github.com/sigp).
 
 [CI Status]: https://github.com/sigp/anchor/workflows/test-suite/badge.svg
 [gh-ci]: https://github.com/sigp/anchor/actions/workflows/test-suite.yml
-[Book Status]:https://img.shields.io/badge/user--docs-stable-informational
+[Book Status]: https://img.shields.io/badge/user--docs-stable-informational
 [Book Link]: https://anchor-book.sigmaprime.io
 [stable]: https://github.com/sigp/anchor/tree/stable
 [unstable]: https://github.com/sigp/anchor/tree/unstable
-[blog]: https://blog.sigmaprime.io
 
 ## Overview
 

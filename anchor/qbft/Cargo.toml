@@ -10,3 +10,8 @@ tracing = { workspace = true }
 futures = { workspace = true }
 tracing-subscriber = { workspace = true }
 derive_more = { workspace = true }
+
+bls-signatures = "0.15"                            # BLS signature support
+rand_core = "0.6"                                  # Random number generation for key creation
+serde = { version = "1.0", features = ["derive"] } # Serialization support
+serde_json = "1.0"                                 # Optional: For JSON serialization
