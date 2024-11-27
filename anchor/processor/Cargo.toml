@@ -1,0 +1,12 @@
+[package]
+name = "processor"
+version = "0.1.0"
+authors = ["Sigma Prime <contact@sigmaprime.io"]
+edition = { workspace = true }
+
+[dependencies]
+tokio = { workspace = true, features = ["sync"] }
+tracing = { workspace = true }
+task_executor = { workspace = true }
+serde = { workspace = true }
+num_cpus = { workspace = true }
