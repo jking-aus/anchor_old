@@ -20,7 +20,6 @@ impl Default for Config {
         }
     }
 }
-
 pub struct Sender {
     name: &'static str,
     tx: mpsc::Sender<WorkItem>,
@@ -124,13 +123,15 @@ async fn processor(config: Config, mut receivers: Receivers, executor: TaskExecu
         };
 
         match work_item.func {
-            AsyncOrBlocking::Async(async_fn) => executor.spawn(
-                async move {
-                    async_fn.await;
-                    drop(permit);
-                },
-                work_item.name,
-            ),
+            AsyncOrBlocking::Async(async_fn) => {
+                executor.spawn(
+                    async move {
+                        async_fn.await;
+                        drop(permit);
+                    },
+                    work_item.name,
+                );
+            }
             AsyncOrBlocking::Blocking(blocking_fn) => {
                 executor.spawn_blocking(
                     move || {
